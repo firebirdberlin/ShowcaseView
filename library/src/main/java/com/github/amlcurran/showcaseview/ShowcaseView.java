@@ -767,7 +767,7 @@ public class ShowcaseView extends RelativeLayout
         this.blockTouches = blockTouches;
     }
 
-    private void setBlockAllTouches(boolean blockAllTouches) {
+    public void setBlockAllTouches(boolean blockAllTouches) {
         this.blockAllTouches = blockAllTouches;
     }
 
