@@ -69,6 +69,7 @@ public class ShowcaseView extends RelativeLayout
     private final ShowcaseAreaCalculator showcaseAreaCalculator;
     private final AnimationFactory animationFactory;
     private final ShotStateStore shotStateStore;
+    private long tag = -1;
 
     // Showcase metrics
     private int showcaseX = -1;
@@ -152,6 +153,9 @@ public class ShowcaseView extends RelativeLayout
         }
 
     }
+
+    public void setShowcaseTag(long tag) {this.tag = tag;}
+    public long getShowcaseTag() {return this.tag;}
 
     private boolean hasShot() {
         return shotStateStore.hasShot();
