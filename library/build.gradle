@@ -13,14 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 buildscript {
     repositories {
-        mavenCentral()
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+        google()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.0.1'
     }
 }
 
@@ -45,7 +48,7 @@ android {
         targetSdkVersion Integer.parseInt(TARGET_SDK)
         minSdkVersion Integer.parseInt(MIN_SDK_LIBRARY)
     }
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '26.0.2'
 }
 
 def parseVersionName() {
