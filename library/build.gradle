@@ -40,7 +40,6 @@ dependencies {
 
 android {
     compileSdkVersion Integer.parseInt(COMPILE_SDK)
-    buildToolsVersion BUILD_TOOLS_VERSION
 
     defaultConfig {
         versionName String.valueOf(parseVersionName())
