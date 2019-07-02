@@ -1,13 +1,3 @@
-task showcaseViewRelease << {
-    if (!project.hasProperty("versionName")) {
-        throw new TaskExecutionException(tasks['commitRelease'], new NullPointerException("No version name supplied"))
-    }
-}
-
-showcaseViewRelease.dependsOn('editReadme')
-showcaseViewRelease.dependsOn('library:uploadArchives')
-showcaseViewRelease.finalizedBy('commitRelease')
-
 task commitRelease(type: Exec) {
     commandLine 'git', "commit", "README.md", "-m", "Update to version " + getVersionName()
 }
