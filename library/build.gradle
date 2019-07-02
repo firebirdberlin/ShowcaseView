@@ -44,7 +44,6 @@ android {
         targetSdkVersion Integer.parseInt(TARGET_SDK)
         minSdkVersion Integer.parseInt(MIN_SDK_LIBRARY)
     }
-    buildToolsVersion '28.0.2'
 }
 
 def parseVersionName() {
